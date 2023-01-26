@@ -5,7 +5,8 @@ public class CodeFlow{
     {
         System.out.println("===============================\n");
     }       
-    int cookiesInStash = 2;
+    int cookiesInStash = 20;
+    final int maxCookies = 100; // mark final and initialize value to have switch label be accepted
 
     System.out.println("\"Let me check my cookies...\"");
     switch(cookiesInStash){
@@ -13,6 +14,9 @@ public class CodeFlow{
       break;
       case 2: System.out.println("Dawn of the final day, 2 cookies remain...");
       break;
+      case maxCookies : System.out.println("The stash is at its max.");
+      break;
+      case 10*2 : System.out.println("I see " + 10*2 + " cookies.");
       default : System.out.println("Could not have a peek inside cookie stash Dx");
     }
     
@@ -21,40 +25,41 @@ public class CodeFlow{
     System.out.println();
 }
 
-    int hourOfDay = 13; // it is worth mentioning that, while int may be declared without a value, the methods like Switch WILL take offense to that.
+    String dayPhase = "Morning"; // it is worth mentioning that, while int may be declared without a value, the methods like Switch WILL take offense to that.
 
     // consider the switch statement like a restless worker that wants to know exactly what to do;
     // if you pass it a variable that has not been instantiated yet, it will throw a fit!
     // If you never tell it to take a break, it will work till all tasks are completed--including the infinite ones.
 
     System.out.println("\"Hey, can I go to the office yet?\"");
-    switch(hourOfDay){
-       
-        case 2 :
-        case 3 : 
-        case 5 :System.out.println("Its too early, go back to sleep.");
+    switch(dayPhase){
+
+        case "Night-morning" : 
+        case "Still super early" :System.out.println("Its almost time!");
         break;
-        case 6 : System.out.println("Its almost time!");
-        case 7 : 
-        case 8 : 
-        case 9 : 
-        case 10 : 
-        case 11 : 
-        case 12 : 
-        case 13 : 
-        case 14 :
-        case 15 : System.out.println("Work on work, the tasks with the highest cognitive load.");
+        case "Morning" : System.out.println("Work on work, the tasks with the highest cognitive load.");
         break;
-        case 16 : System.out.println("Focus on wrapping things up, plan things for tomorrow and the future.");
+        case "Afternoon" : System.out.println("Focus on wrapping things up, plan things for tomorrow and the future.");
         break;
         default : System.out.println("Check another hour.");
-
-
     }
-
 
     {
         System.out.println("\n===============================");
     }
+
+    int i1 = 1;
+    short s1 = 2;
+    for (int beep = 6 ; s1> 0 ; i1++, s1--, m1()){
+        System.out.println("heya ni iru");// code block must include break to get to rest of code
+    }
+
+    {
+        System.out.println("\n===============================");
+    }
+    }
+
+    static void m1 (){
+        System.out.println("Executed m1");
     }
 }
