@@ -25,23 +25,23 @@ public class CodeFlow{
     System.out.println();
 }
 
-    String dayPhase = "Morning"; // it is worth mentioning that, while int may be declared without a value, the methods like Switch WILL take offense to that.
+    String dayOfWeek = "Monday"; // it is worth mentioning that, while int may be declared without a value, the methods like Switch WILL take offense to that.
 
     // consider the switch statement like a restless worker that wants to know exactly what to do;
     // if you pass it a variable that has not been instantiated yet, it will throw a fit!
     // If you never tell it to take a break, it will work till all tasks are completed--including the infinite ones.
 
-    System.out.println("\"Hey, can I go to the office yet?\"");
-    switch(dayPhase){
+    System.out.println("\"What part of the week are we in?\"");
+    switch(dayOfWeek){
 
-        case "Night-morning" : 
-        case "Still super early" :System.out.println("Its almost time!");
+        case "Monday" : 
+        case "Tuesday" :System.out.println("It is the first half of the week.");
         break;
-        case "Morning" : System.out.println("Work on work, the tasks with the highest cognitive load.");
+        case "Wednesday" :
+        case "Thursday" : System.out.println("The weekend is nearly there.");
         break;
-        case "Afternoon" : System.out.println("Focus on wrapping things up, plan things for tomorrow and the future.");
-        break;
-        default : System.out.println("Check another hour.");
+        case "Friday" : System.out.println("Final day of the week, prepare for the next.");
+        default : System.out.println("This should be the weekend.");
     }
 
     {
@@ -51,7 +51,7 @@ public class CodeFlow{
     int i1 = 1;
     short s1 = 2;
     for (int beep = 6 ; s1> 0 ; i1++, s1--, m1()){
-        System.out.println("heya ni iru");// code block must include break to get to rest of code
+        System.out.println("Looping the for loop");// code block must include break to get to rest of code
     }
 
     {
