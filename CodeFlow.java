@@ -69,37 +69,37 @@ public class CodeFlow{
         System.out.println(dogs);
         sb.insert(0, " extra");
     }
-    System.out.println("Ended up with " + dogs + " dogs and" + sb + "!");
+    System.out.println("Ended up with " + dogs + " dogs and" + sb);
 
     System.out.println();
 
-    StringBuilder pets[] = {
-        new StringBuilder("Bunny"),
-        new StringBuilder("Fish"),
-        new StringBuilder("Kat")
+    StringBuilder items[] = {
+        new StringBuilder("Ludens"),
+        new StringBuilder("Lord Dom's"),
+        new StringBuilder("Mobies")
     };
 
-    for (StringBuilder x : pets)
+    for (StringBuilder x : items)
     System.out.println(x);
-    for (StringBuilder x : pets){
-        x.append(" is happy");
+    for (StringBuilder x : items){
+        x.append(" has been purchased");
     }
-    for (StringBuilder x : pets)
+    for (StringBuilder x : items)
     System.out.println(x);
 
 
     System.out.println();
     StringBuilder mounts[] = {  //creatre an array of objects
-        new StringBuilder("Legendary dragon"),
-        new StringBuilder("Sandy ostrich"),
-        new StringBuilder("Dream whale")
+        new StringBuilder("Destrier"),
+        new StringBuilder("Stormdragon"),
+        new StringBuilder("Dreamfish")
     };
 
     for (StringBuilder x : mounts)  // print out their initial value
         System.out.println(x);
     
     for (StringBuilder x : mounts){
-    x = new StringBuilder("Default horse"); // change the reference
+    x = new StringBuilder("Trade-run snail"); // change the reference
     //System.out.println(x);            // notice how this would have printed horse, as X is but a local variable
     }
 
@@ -107,11 +107,19 @@ public class CodeFlow{
     System.out.println(x);
 
     Enter();
+
+    int presents = 5;
+    System.out.println("There are " + presents + " presents coming your way.");
+    if (++presents > 100) System.out.println("Its over 100!");
+    System.out.println("Total presents amount is " + presents);
+
+    Enter();
 }
 
     static void m1 (){
         System.out.println("Executed m1");
     }
+
 
     static void Enter(){System.out.println("\n========================="+"\n");}
 }
